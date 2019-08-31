@@ -291,6 +291,14 @@ def linear(x):
 
 
 @keras_export('keras.activations.serialize')
+"""Serialize function.
+
+  Arguments:
+      `activation`: Name.
+
+  Returns:
+      Keras object with activation.
+  """
 def serialize(activation):
   if (hasattr(activation, '__name__') and
       activation.__name__ in _TF_ACTIVATIONS_V2):
